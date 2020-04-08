@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 import tkinter as tk
 from tkinter import filedialog
 from tkinter import messagebox
@@ -107,7 +108,7 @@ class Application(tk.Frame):
             cur = root.conn.cursor()
             cur.execute("UPDATE `datas` SET `ot`='{1}' WHERE `ot`='{0}'".format(self.comboExample.current(),self.newRule.current()))
             root.conn.commit()
-            messagebox.showinfo("提示"，"更新完成")
+            messagebox.showinfo("提示","更新完成")
         else:
             messagebox.showerror("錯誤", "請按照步驟執行")
             
